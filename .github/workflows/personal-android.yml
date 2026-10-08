@@ -23,7 +23,7 @@ jobs:
           packages: platform-tools
           log-accepted-android-sdk-licenses: false
       - name: Install compile SDK
-        run: sdkmanager 'platforms;android-37'
+        run: sdkmanager 'platforms;android-36'
       - uses: gradle/actions/setup-gradle@v6
       - name: Build debug APK
         run: ./gradlew :app:assembleMadaniDebug -PdisableFirebase --no-daemon
