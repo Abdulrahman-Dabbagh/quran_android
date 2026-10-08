@@ -36,8 +36,8 @@ android {
   namespace = "com.quran.labs.androidquran"
 
   defaultConfig {
-    versionCode = 3642
-    versionName = "3.6.4"
+    versionCode = 1
+    versionName = "0.1.0"
     testInstrumentationRunner = "com.quran.labs.androidquran.core.QuranTestRunner"
   }
 
@@ -74,7 +74,7 @@ android {
   flavorDimensions += listOf("pageType")
   productFlavors {
     create("madani") {
-      applicationId = "com.quran.labs.androidquran"
+      applicationId = "com.abdulrahman.quran"
     }
   }
 
@@ -165,10 +165,10 @@ androidComponents {
     if (applicationId.endsWith("debug")) {
       val name = variant.flavorName ?: variant.name
       variant.manifestPlaceholders.put("app_debug_label",
-        "Quran ${name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}")
+        "Quran Personal ${name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}")
       unitTestManifestPlaceholders?.put(
         "app_debug_label",
-        "Quran ${name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}"
+        "Quran Personal ${name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}"
       )
     }
   }
